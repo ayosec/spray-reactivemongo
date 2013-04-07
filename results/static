@@ -1,0 +1,57 @@
+$ ab -c 100 -n 5000 http://127.0.0.1:9090/static
+This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 127.0.0.1 (be patient)
+Completed 500 requests
+Completed 1000 requests
+Completed 1500 requests
+Completed 2000 requests
+Completed 2500 requests
+Completed 3000 requests
+Completed 3500 requests
+Completed 4000 requests
+Completed 4500 requests
+Completed 5000 requests
+Finished 5000 requests
+
+
+Server Software:        spray-can/1.1-M7
+Server Hostname:        127.0.0.1
+Server Port:            9090
+
+Document Path:          /static
+Document Length:        6 bytes
+
+Concurrency Level:      100
+Time taken for tests:   0.331 seconds
+Complete requests:      5000
+Failed requests:        0
+Write errors:           0
+Total transferred:      740000 bytes
+HTML transferred:       30000 bytes
+Requests per second:    15102.59 [#/sec] (mean)
+Time per request:       6.621 [ms] (mean)
+Time per request:       0.066 [ms] (mean, across all concurrent requests)
+Transfer rate:          2182.80 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    1   0.8      0       3
+Processing:     1    6   6.4      5      45
+Waiting:        0    6   6.4      5      44
+Total:          2    7   6.3      5      45
+WARNING: The median and mean for the initial connection time are not within a normal deviation
+        These results are probably not that reliable.
+
+Percentage of the requests served within a certain time (ms)
+  50%      5
+  66%      5
+  75%      6
+  80%      6
+  90%      7
+  95%     22
+  98%     28
+  99%     42
+ 100%     45 (longest request)
